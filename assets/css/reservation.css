@@ -1,0 +1,175 @@
+.reservation-match-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #224f45;
+    margin-bottom: 1.5rem;
+}
+
+.reservation-match-card h3 {
+    font-size: 1.3rem;
+    color: #1a1a2e;
+    margin-bottom: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.reservation-match-card p {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0.3rem 0;
+}
+
+.reservation-match-card p span {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+/* Formulaire de choix de billet */
+.billets-form {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.billets-form h3 {
+    font-size: 1.1rem;
+    color: #1a1a2e;
+    margin-bottom: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Chaque ligne de billet */
+.billet-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    background: #f8f9fa;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s, background 0.2s;
+    margin-bottom: 0.8rem;
+}
+
+.billet-label:hover {
+    background: #fff0f3;
+    border-color: #e94560;
+}
+
+.billet-label input[type="radio"] {
+    accent-color: #e94560;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.billet-label input[type="radio"]:checked + .billet-info {
+    color: #e94560;
+}
+
+.billet-label:has(input[type="radio"]:checked) {
+    background: #fff0f3;
+    border-color: #e94560;
+}
+
+.billet-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+}
+
+.billet-categorie {
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 0.95rem;
+}
+
+.billet-siege {
+    font-size: 0.82rem;
+    color: #999;
+}
+
+.billet-prix {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e94560;
+    white-space: nowrap;
+}
+
+/* Boutons */
+.reservation-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.reservation-actions .btn-primary {
+    background: #bad9f5;
+    color: black;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.reservation-actions .btn-primary:hover {
+    background: #224f45;
+}
+
+.reservation-actions .btn-secondary {
+    background: #f0f0f0;
+    color: #1a1a2e;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.reservation-actions .btn-secondary:hover {
+    background: #ddd;
+}
+
+/* Titre de la page */
+.reservation-titre {
+    font-size: 1.6rem;
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .billet-label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .billet-prix {
+        align-self: flex-end;
+    }
+
+    .reservation-actions {
+        flex-direction: column;
+    }
+
+    .reservation-actions a,
+    .reservation-actions button {
+        width: 100%;
+        text-align: center;
+    }
+}

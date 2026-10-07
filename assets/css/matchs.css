@@ -1,0 +1,135 @@
+.matchs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.match-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #224f45;
+    transition: transform 0.3s;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+.match-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.match-stade {
+    background: #f0f0f0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.match-date {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.match-equipes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    gap: 1rem;
+}
+
+.equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 0.3rem;
+}
+
+.equipe-nom {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    text-align: center;
+}
+
+.equipe-label {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.vs {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #224f45;
+    flex-shrink: 0;
+}
+
+.match-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1rem;
+}
+
+.match-places {
+    color: #27ae60;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.btn-reserver {
+    background: #e94560;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.btn-reserver:hover {
+    background: #c73652;
+}
+
+.btn-connexion {
+    background: #1a1a2e;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.btn-connexion:hover {
+    background: #bad9f5;
+}
+
+@media (max-width: 768px) {
+    .match-card-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .match-card-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

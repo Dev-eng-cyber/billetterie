@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+body{
+    padding: 10px;
+}
+
+.image_entete{
+    background-image: url("/billetterie/assets/img/image_entete.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    text-align: center;
+    width: 100vw;
+    margin-top: 10px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.hero-overlay {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5));
+    padding: 1rem;
+}
+
+.hero-overlay h1 {
+
+    text-align: center;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.hero-overlay p {
+    font-size: 1.05rem;
+}
+
+.hero-btn {
+    margin-top: 0.8rem;
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    text-decoration: none;
+    background: #fff;
+    color: #1b1b1b;
+    font-weight: 600;
+}
+
+.promo-section {
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+}
+.promo-image img {
+  height: 400px;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.promo-content {
+    max-width: 500px;
+}
+
+.promo-content h2 {
+    font-size: 2.2rem;
+    color: #161616;
+    line-height: 1.1;
+}
+
+.promo-content p {
+    font-size: 20px;
+}
+
+.promo-actions {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+
+
+.promo-btn-primary {
+    padding: 10px 40px;
+    border-radius: 12px;
+    color: black;
+    background-color: #bad9f5;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    border: none;
+}
+
+.promo-btn-outline {
+    padding: 10px 40px;
+    border-radius: 12px;
+    border: 1px solid black;
+    color: black;
+    background-color: transparent;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .promo-section {
+        flex-direction: column-reverse; /* passe en colonne */
+        text-align: center;  
+    }
+
+    .promo-image img {
+        width: 100%;   /* l’image prend toute la largeur */
+        height: 300px;
+        width: 300px;  /* garde les proportions */
+        margin-top: 10px;
+    }
+
+    .promo-content {
+        flex-direction: column; /* passage en colonne */
+        align-items: center;    /* centre horizontalement paragraphe et image */
+        justify-content: center; /* centre verticalement si besoin */
+        text-align: center; 
+    }
+
+}
+
+.temoignages {
+    padding: 4rem 2rem;
+    background-color: aliceblue;
+}
+
+.temoignages-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.temoignages-header h2 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.temoignages-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.temoignages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.temoignage-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s;
+}
+
+.temoignage-card:hover {
+    transform: translateY(-6px);
+}
+
+.temoignage-card.featured {
+    border-top: 4px solid #224f45;
+    transform: translateY(-8px);
+}
+
+.temoignage-card.featured:hover {
+    transform: translateY(-14px);
+}
+
+.etoiles {
+    margin-bottom: 1rem;
+}
+
+.etoiles i {
+    color: #f39c12;
+    font-size: 0.95rem;
+}
+
+.temoignage-texte {
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.temoignage-auteur {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.auteur-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #224f45;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.auteur-info strong {
+    display: block;
+    color: #1a1a2e;
+    font-size: 0.95rem;
+}
+
+.auteur-info span {
+    color: #999;
+    font-size: 0.82rem;
+}
+
+@media (max-width: 768px) {
+    .temoignage-card.featured {
+        transform: translateY(0);
+    }
+}
+
+.about-section {
+    width: 100vw;
+    margin: 2.2rem calc(50% - 50vw);
+}
+
+.about-inner {
+    width: 100%;
+    margin: 0;
+    background: #ffffff;
+    border-radius: 0;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+}
+
+.about-header {
+    margin-bottom: 0.9rem;
+}
+
+.about-badge {
+    display: inline-block;
+    background: #e9f2fb;
+    color: #0c2033;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+
+.about-header h2 {
+    font-size: 2rem;
+    color: #111;
+}
+
+.about-intro {
+    color: #444;
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+    max-width: 880px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.about-card {
+    background: #f7f8fa;
+    border: 1px solid #eceff3;
+    border-radius: 10px;
+    padding: 1rem;
+    
+}
+
+.about-card h3 {
+    font-size: 1.05rem;
+    color: #121212;
+    margin-bottom: 0.45rem;
+    text-decoration: none;
+}
+
+.about-card p {
+    color: #555;
+    line-height: 1.55;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+    .about-inner {
+        padding: 1.2rem;
+    }
+
+    .about-header h2 {
+        font-size: 1.45rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

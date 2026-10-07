@@ -1,0 +1,8 @@
+# Bloquer l'accès direct aux fichiers sensibles
+Options -Indexes
+
+# Forcer le passage par PHP (la session est vérifiée dans chaque page)
+<Files "*.php">
+    Order Allow,Deny
+    Allow from all
+</Files>

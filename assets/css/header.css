@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body{
+    background-color: white;
+    padding: 10px;
+  }
+  
+  
+  
+  .logo span{
+    color: #224f45;
+  }
+  
+  .logo{
+    color: black;
+  }
+  
+  li{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+    font-style: 1rem;
+  }
+  
+  a:hover{
+    color: #224f45;
+  }
+  
+  header{
+    position: relative;
+    background-color: aliceblue ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 2rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .navbar{
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar .links{
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navbar .burger_menu_button{
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .buttons{
+    display: flex;
+    gap:10px ;
+  }
+
+  .links li a{
+    font-size: 20px;
+  }
+
+  
+  .action-button{
+    background-color: #bad9f5;
+    color: #120d31;
+    border: 1px solid #bad9f5;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  .action-button:hover{
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  
+  .pro{
+    color: black;
+    border: 1px solid #fff;
+  }
+  
+  .pro:hover{
+    background-color: #224f45;
+    color: #120d31;
+  }
+  
+  /*-----BURGER MENU-----*/
+  .burger_menu{
+    display: none;
+    height: auto;
+    max-height: 0;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.2) ;
+    backdrop-filter: blur(100px) ;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: max-height 0.25s ease;
+  }
+  
+  .burger_menu.open{
+    max-height: 500px;
+  }
+  
+  .burger_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .divider{
+    height: 1px;
+    background-color: #fff;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .burger_menu .action-button{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buttons_burger_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  /*-----RESPONSIVE-----*/
+  @media (max-width: 990px){
+    header{
+      background-color: none;
+    }
+  
+    .navbar .links, .navbar .action-button{
+      display: none;
+    }
+  
+    .navbar .burger_menu_button{
+      display: block;
+    }
+  
+    .burger_menu{
+      display: block;
+    }
+  }

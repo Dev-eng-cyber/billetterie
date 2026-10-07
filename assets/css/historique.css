@@ -1,0 +1,172 @@
+.historique-titre {
+    font-size: 1.6rem;
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Card vide */
+.historique-vide {
+    background: transparent;
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: none;
+    border: none;
+    margin-top: 200px;
+}
+
+.historique-vide .vide-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.historique-vide p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.historique-vide .btn-voir-matchs {
+    background: #e94560;
+    color: white;
+    padding: 0.7rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.historique-vide .btn-voir-matchs:hover {
+    background: #c73652;
+}
+
+/* Card billet */
+.billet-card {
+    background: transparent;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: none;
+    margin-bottom: 1.2rem;
+    transition: transform 0.2s;
+    border-left: 4px solid #e94560;
+}
+
+.billet-card:hover {
+    transform: translateY(-3px);
+}
+
+.billet-card.confirmee {
+    border-left-color: #27ae60;
+}
+
+.billet-card.en_attente {
+    border-left-color: #f39c12;
+}
+
+.billet-card.annulee {
+    border-left-color: #e74c3c;
+    opacity: 0.75;
+}
+
+/* Contenu de la card */
+.billet-card-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Partie gauche */
+.billet-card-left h3 {
+    font-size: 1.05rem;
+    color: #1a1a2e;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.billet-card-left .billet-meta {
+    color: #666;
+    font-size: 0.88rem;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.billet-card-left .billet-ref {
+    color: #bbb;
+    font-size: 0.78rem;
+    margin-top: 0.4rem;
+    font-style: italic;
+}
+
+/* Partie droite */
+.billet-card-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.6rem;
+}
+
+.billet-prix {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #e94560;
+}
+
+/* Badges de statut */
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.badge.confirmee {
+    background: #eafaf1;
+    color: #27ae60;
+}
+
+.badge.en_attente {
+    background: #fef9e7;
+    color: #f39c12;
+}
+
+.badge.annulee {
+    background: #fdedec;
+    color: #e74c3c;
+}
+
+/* Bouton payer */
+.btn-payer {
+    background: #e94560;
+    color: white;
+    padding: 0.4rem 1.1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-payer:hover {
+    background: #c73652;
+}
+
+@media (max-width: 768px) {
+    .billet-card-inner {
+        flex-direction: column;
+    }
+
+    .billet-card-right {
+        align-items: flex-start;
+        text-align: left;
+    }
+}

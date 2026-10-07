@@ -1,0 +1,104 @@
+.auth-layout {
+    width: min(1100px, 100%);
+    margin: 9rem auto 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    min-height: 560px;
+}
+
+.auth-visual {
+    background-image: url("/billetterie/assets/img/image_login.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.auth-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45));
+}
+
+.auth-content {
+    padding: 2.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    width: min(430px, 100%);
+}
+
+.auth-title {
+    color: #111;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+    color: #666;
+    margin-bottom: 1.6rem;
+}
+
+.auth-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.auth-form input {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.auth-form input:focus {
+    border-color: #224f45;
+    box-shadow: 0 0 0 3px rgba(34, 79, 69, 0.12);
+}
+
+.auth-submit {
+    width: 100%;
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    margin-top: 0.4rem;
+    background: #111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.auth-switch {
+    margin-top: 1rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.93rem;
+}
+
+.auth-switch a {
+    color: #224f45;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .auth-layout {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .auth-visual {
+        min-height: 240px;
+    }
+
+    .auth-content {
+        padding: 1.5rem 1rem;
+    }
+}
